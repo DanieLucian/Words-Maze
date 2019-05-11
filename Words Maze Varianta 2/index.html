@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Words Maze</title>
+</head>
+
+<body id="body">
+
+ 
+<audio src="Super Mario Bros. Music - Ground Theme.mp3" type="audio.mp3" id="background-music" autoplay="true" loop="true"></audio>
+
+<button id="music-button" onclick="playOrPause()">
+    <div id="cross"></div>
+    </button>
+ 
+
+<div id="menu-page">
+
+    <h1> WORDS MAZE </h1>
+    <main class="startbuttons-box">
+    <button class="startbuttons" onclick="start()">Start</button>
+    <br>
+    <button class="startbuttons" onclick="toLevels()">Levels</button>
+    <br>
+    <button class="startbuttons" onclick="exit()">Exit</button>
+    </main>
+
+</div>
+
+<div id="exit-modal-bg">
+
+<div id="exit-modal">
+        <div id="exit-modal-header"></div>
+        <div id="exit-modal-body">Just close the tab!</div>
+        <div id="exit-modal-footer"></div>
+    </div>
+</div>
+
+<div id="howtoplay-page">
+
+    <h1>How to Play</h1>
+    <p>1. You are given a certain amount of letters with which you can generate multiple words.
+        Among all the words there is a key word that brings you to the next level if you write it.
+        <br>
+        <br>
+        2. In order to generate words you click on any letter given to fill the gaps from left to right.
+        <br>
+        <br>
+        3. Good Luck and Have Fun!
+    </p>
+    <div class="howtoplaybuttons-box">
+    <button class="howtoplaybuttons" onclick="location='Levels/Levels-HTML/Level 1.html'">Let's go!</button>
+    <br>
+    <button class="howtoplaybuttons" onclick="toMenu()">Back to menu</button>
+</div>
+</div>
+
+
+<div id="levels-page">
+
+   <h1>Levels</h1>
+    <div class="levelbox">
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 1.html'">1</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 2.html'">2</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 3.html'">3</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 4.html'">4</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 5.html'">5</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 6.html'">6</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 7.html'">7</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 8.html'">8</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 9.html'">9</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 10.html'">10</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 11.html'">11</button>
+        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 12.html'">12</button>
+        <button class="levelbuttons" id="levels-back-button" onclick="toMenu()">Back</button>
+    </div>
+</div>
+
+</div>
+</body>
+
+<script type="text/javascript" src="index.js">
+</script>
+
+</html>

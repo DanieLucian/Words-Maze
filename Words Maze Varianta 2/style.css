@@ -1,0 +1,672 @@
+html {
+    overflow: hidden;
+}
+
+#body {
+    background-image: url("background.gif");
+    background-blend-mode: lighten;
+    background-color: #ffffff2a;
+    height: 800px;
+}
+
+
+#music-button { 
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 9px;
+    right: 9px;
+    background-image: url("Musical Note.PNG");
+    background-position: center;
+    outline: none;
+    border-radius: 50%; 
+    border: 2.5px rgb(255, 255, 255);
+    border-style: solid;
+}
+
+
+#sound-form {
+    position: absolute;
+    background-color: rgb(122, 122, 122);
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(40% 27%, 80% 0, 80% 99%, 40% 73%, 10% 73%, 10% 27%);    
+} 
+
+#cross {
+    display: none;
+    background-color: red;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    clip-path: polygon(85% 0, 100% 0, 15% 100%, 0% 100%);
+    opacity: 0.4;
+    right: -4px;
+    border-radius: 50%;
+}
+
+/*menu page*/
+#menu-page {
+    animation: showpage 0.5s;
+}
+
+#menu-page h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#ffffff;
+    text-shadow:-4px 0 rgb(50, 10, 224), 0 2px rgb(226, 3, 3), 0px 0 black, 0 -2px rgb(41, 207, 19);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.startbuttons-box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.startbuttons {
+    margin: 15px;
+    height: 60px;
+    width: 230px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: honeydew;
+    animation-name: example;
+    animation-duration: 7.6s;
+    animation-iteration-count: infinite;
+}
+
+#exit-modal-bg {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+}
+
+#exit-modal {
+    position: relative;
+    width: 550px;
+    height: 120px;
+    animation: showmodal 0.4s;
+    bottom: 120px;
+}
+
+#exit-modal-header {
+    background-color: brown;
+    height: 45px;     
+}
+
+#exit-modal-body {
+    display: flex;
+    background-color: rgb(145, 136, 136);
+    margin: 0px;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#exit-modal-footer {
+    text-align: center;
+    background-color: brown;
+    height: 50px; 
+}
+/*menu page*/
+
+@keyframes example {
+    0% {background-color: hsla(14, 89%, 50%, 0.959);}
+    14% {background-color: hsla(246, 89%, 50%, 0.959);}
+    28% {background-color: hsla(36, 89%, 50%, 0.959);}
+    42% {background-color: hsla(120, 89%, 50%, 0.959);}
+    56% {background-color: hsla(278, 89%, 50%, 0.959);}
+    70% {background-color: hsla(180, 89%, 50%, 0.959);}
+    85% {background-color: hsla(310, 89%, 50%, 0.959);}
+    100% {background-color: hsla(14, 89%, 50%, 0.959);}
+}
+
+/*howtoplay page*/
+#howtoplay-page {
+    display: none;
+    animation: showpage 0.5s;
+}
+
+@keyframes showpage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#howtoplay-page h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color:#ffffff;
+    text-shadow:-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+#howtoplay-page p {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: normal;
+    font-size: 18px;
+    color:#ffffff;
+    text-shadow:-2px 0 black, 0 2px black, 3px 0 black, 0 -2px black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+.howtoplaybuttons-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howtoplaybuttons {
+    height: 60px;
+    width: 280px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-style: italic;
+    background-color: honeydew;
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;   
+}
+/*howtoplay page*/
+
+/*levels page*/
+#levels-page {
+    display: none;
+    animation: showpage 0.2s;
+}
+
+#levels-page h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 35px;
+    font-weight: bold;
+    color:#ffffff;
+    text-shadow:-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.levelbox {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.levelbuttons {
+    margin: 7px;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-style: italic;
+    background-color: rgb(173, 168, 168);
+    width: 50px;
+    height: 50px;
+}
+
+#levels-back-button {
+    width: 50%;
+}
+/*levels page*/
+
+/*level1 page*/
+#level1-page {
+    display: block;
+    animation: showpage 2s;
+}
+
+h6 {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color:#ffffff;
+    text-shadow:-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+}
+
+.level1-letter-container {
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    position: relative;
+    opacity: 0.8;
+}
+
+.level1-letter-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(173, 168, 168);
+    text-align: center;
+    margin: 0;
+    width: 47px;
+    height: 47px;
+    font-size: 20px;
+    border: 3px solid;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    outline-offset: 5px;
+    font-family: 'Crimson Text', serif;
+}
+
+.backspacebutton-box {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 155px;
+    width: 98px;
+    height: 68px;
+    background-color: rgba(255, 0, 0, 0.733);
+    clip-path: polygon(25% 9%, 96% 9%, 96% 91%, 25% 91%, 2% 51%);
+}
+
+.backspacebutton {
+    width: 90px;
+    height: 60px;
+    opacity: 0.9; 
+    clip-path: polygon(25% 9%, 96% 9%, 96% 91%, 25% 91%, 2% 51%);
+}
+
+.backspacebutton p {
+    position: relative;
+    font-size: 35px;
+    font-weight: bolder;
+    left: 8%;
+    bottom: 1.8rem;
+    opacity: 0.6;
+    color: black;
+    font-family: 'Luckiest Guy', cursive;
+} 
+
+.fiveletterbox {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;   
+    top: 105px;  
+}
+
+.letterbutton {
+    text-align: center;
+    width: 67px;
+    height: 67px;
+    margin: 17px;
+    font-size: 30px;
+    font-family: 'Crimson Text', serif;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    border-style: solid;
+    border-color: rgb(173, 168, 168);
+    font-weight: bolder;
+    opacity: 0.9;
+    padding: 0;
+}
+
+.letterbutton:hover {
+    background-color: #33cc33;
+}
+
+.nextlevel-modal {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.modal-content {
+    position: relative;
+    bottom: 150px;
+    width: 400px;
+    height: 308px;
+    animation: showmodal 0.7s;
+    
+}
+
+#modal-body {  
+     background-color: rgb(145, 136, 136);
+     margin: 0px;
+     height: 200px;
+} 
+
+#modal-body p {
+    position: relative;
+    margin: 0px; 
+    top: 5px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 21px;
+    color:#ffffff;
+    text-shadow:-2px 0 rgba(0, 0, 0, 0.301), 0 2px rgba(0, 0, 0, 0.301), 3px 0 rgba(0, 0, 0, 0.301), 0 -2px rgba(0, 0, 0, 0.301);
+    text-align: center;
+    vertical-align: middle;
+}
+
+#modal-word {
+    margin-top: 11%;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    color: rgb(247, 247, 17);
+}
+
+#modal-header {
+    text-align: center;
+    background-color: brown;
+    height: 40px;     
+}
+
+#modal-header p {
+    position: relative;
+    margin: 0px; 
+    top: 20%;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color:#ffffff;
+    text-shadow:-2px 0 rgba(0, 0, 0, 0.301), 0 2px rgba(0, 0, 0, 0.301), 3px 0 rgba(0, 0, 0, 0.301), 0 -2px rgba(0, 0, 0, 0.301);
+    text-align: center;
+    vertical-align: middle;
+}
+
+#modal-footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: brown;
+    height: 70px; 
+}
+
+#modal-word p {
+    position: relative;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 30px;
+}
+
+
+#modalbutton {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    animation: change 1.2s infinite;
+    font-size: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow:-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-style: italic;
+}
+
+.toMenu-button {
+    position: absolute;
+    width: 95px;
+    height: 50px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    bottom: 9px;
+    right: 9px;
+}
+
+.eightletterbox {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;   
+    top: 100px;
+}
+
+.nineletterbox {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;   
+    top: 100px;
+}
+
+@keyframes showmodal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        }
+}
+
+@keyframes change {
+    from {
+        background-color: greenyellow;
+    }
+    to {
+        background-color: blueviolet;
+    }
+}
+
+
+/* media queries */
+@media (min-width:768px) {
+    #menu-page h1 {
+         margin-top: 60px;
+         font-size: 120px;
+         line-height: 80px;
+         width: 500px;
+         margin-left: auto;
+         margin-right: auto;
+    }
+    .startbuttons-box {
+        margin-top: 110px;
+    }
+    .startbuttons {
+        width: 380px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    #howtoplay-page h1 {
+        font-size: 40px;
+    }
+    #howtoplay-page p {
+        font-size: 23px;
+        line-height: 40px;
+    }
+    .howtoplaybuttons {
+        width: 350px;
+        height: 65px;
+        font-size: 20px;
+    }
+    h6 {
+        font-size: 70px;
+    }
+    .letterbutton {
+        width: 100px;
+        height: 100px;
+        font-size: 55px;
+    }
+    .fiveletterbox {
+        width: 500px;
+        top: 100px;
+    }
+    .eightletterbox {
+        width: 600px;
+        height: 280px;
+    }
+    .nineletterbox {
+        width: 750px;
+    }
+    .level1-letter-item {
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+        border: 6px solid;
+    }
+    .backspacebutton-box {
+        top: 180px;
+        width: 119px;
+        height: 79px;
+    }
+    .backspacebutton {
+        width: 110px;
+        height: 70px;
+    }
+    .backspacebutton p {
+        font-size: 37px;
+    }
+    .level1-letter-container {
+        bottom: 60px;
+    }
+    #levels-page h1 {
+        font-size: 70px;
+    }
+    .levelbox {
+        width: 600px;
+    }
+    .levelbuttons {
+        width: 90px;
+        height: 90px;
+        font-size: 25px;
+        margin: 9px;
+    }
+    .level1-letter-item h2 {
+        font-size: 55px;
+    } 
+    .modal-content {
+        width: 650px;
+    }
+    #modal-word p {
+        font-size: 50px;
+    }
+    #modal-header p{
+        font-size: 30px;
+        top: 10%;
+    }
+    #modal-body p {
+        font-size: 37px;
+    }
+    #modalbutton {
+        font-size: 22px;
+    }
+}
+
+@media (min-width:1024px){
+    #menu-page h1 {
+        font-size: 140px;
+        line-height: 95px;
+        text-shadow:-6px 0 rgb(50, 10, 224), 0 3px rgb(226, 3, 3), 0px 0 rgb(0, 0, 0), 0 -3px rgb(41, 207, 19);
+    }
+    #levels-page h1 {
+        font-size: 85px;
+    }
+    .levelbuttons {
+        width: 115px;
+        height: 115px;
+        font-size: 32px;
+    }
+    .levelbox {
+        width: 700px;
+    }
+    #levels-back-button {
+        width: 54%;
+    }
+    #howtoplay-page p {
+        font-size: 33px;
+        line-height: 45px;
+    }
+    .level1-letter-item {
+        margin: 10px;
+    }
+    .toMenu-button {
+        height: 55px;
+        width: 115px;
+        font-size: 23px;
+    }
+    .backspacebutton-box {
+        top: 200px;
+        width: 139px;
+        height: 88px;
+    }
+    .backspacebutton {
+        width: 130px;
+        height: 79px;
+    }
+    .backspacebutton p {
+        font-size: 40px;
+    }
+    .letterbutton {
+        width: 110px;
+        height: 110px;
+    }
+    .modal-content {
+        Width: 750px;
+    }
+    #modal-header{
+        height: 60px;
+    }
+    #modal-body {
+        height: 250px;
+    }
+    #modal-footer {
+        height: 90px;
+    }
+    #modalbutton {
+        height: 45px;
+        width: 220px;
+    }
+    #modal-header p {
+        font-size: 37px;
+    }
+    .eightletterbox {
+        width: 700px;
+    }
+}
+/* media queries*/

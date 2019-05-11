@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Akronim|Crimson+Text" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Level 6</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body id="body">
+
+
+        <audio src="../../clap.mp3" style="display:none" id="clap"></audio>
+        <audio src="../../fail.mp3" style="display:none" id="fail"></audio>
+        <audio src="../../Slow-Clap.mp3" style="display:none" id="Slow-Clap"></audio>
+
+    <button class="toMenu-button" onclick="location='../../index.html'">Menu</button>
+
+        <h6>Level 6</h6>
+
+        <div class="backspacebutton-box">
+        <button class="backspacebutton" onclick="backspace()">
+            <p>X</p></button>
+        </div>
+    
+        <div class="level1-letter-container" id="level1-letter-container">
+            <div class="level1-letter-item" ><h2 id="letter-1">_</h2></div>
+            <div class="level1-letter-item" ><h2 id="letter-2">_</h2></div>
+            <div class="level1-letter-item" ><h2 id="letter-3">_</h2></div>
+            <div class="level1-letter-item" ><h2 id="letter-4">_</h2></div>
+            <div class="level1-letter-item" ><h2 id="letter-5">_</h2></div>
+            <div class="level1-letter-item" ><h2 id="letter-6">_</h2></div>
+        </div>
+    
+        <div class="nineletterbox" id="nineletterbox">
+            <button class="letterbutton"  id="I" onclick="I()" >I</button>
+            <button class="letterbutton"  id="T" onclick="T()" >T</button>
+            <button class="letterbutton"  id="R" onclick="R()" >R</button>
+            <button class="letterbutton"  id="L" onclick="L()" >L</button>
+            <button class="letterbutton"  id="M" onclick="M()" >M</button>
+            <button class="letterbutton"  id="P" onclick="P()" >P</button>
+            <button class="letterbutton"  id="E" onclick="E()" >E</button>
+            <button class="letterbutton"  id="U" onclick="U()" >U</button>
+            <button class="letterbutton"  id="S" onclick="S()" >S</button>
+           </div>
+
+
+           <div class="nextlevel-modal" id="modal">
+        <div class="modal-content">
+            <div  id="modal-header"><p id="modal-header-text"></p></div>
+            <div  id="modal-body"><p id="modal-body-text"></p>
+            <div  id="modal-word"><p></p></div>
+            </div>
+            <div  id="modal-footer">
+                <button id="modalbutton"></div>
+     </div>
+     </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="../Levels-JavaScript/Level 6.js">
+</script>
+
+</html>
