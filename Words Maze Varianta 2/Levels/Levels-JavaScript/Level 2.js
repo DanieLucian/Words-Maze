@@ -9,7 +9,7 @@ var word5 = "T,A,P,E";
 var nextlevelmodal = document.getElementById('modal');
 var clap = document.getElementById('clap');
 var fail = document.getElementById('fail');
-var SlowClap = document.getElementById('Slow-Clap');
+var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
 
 function P(){
     document.getElementById('P').style.display = "none";
@@ -130,7 +130,7 @@ function verify(){
     if (k == 4){
     if (sir.toString() == key){
         sir = myword();
-        document.getElementById('body').style.backgroundColor = "#000000ef";
+        document.getElementById('nextlevel-modal-background').style.display = "block";
         document.getElementById('fiveletterbox').style.filter = "blur(4px)";
         document.getElementById('level1-letter-container').style.filter = "blur(4px)";
         document.getElementById('modal-word').innerHTML = sir;
@@ -146,7 +146,7 @@ function verify(){
 
     else if(sir.toString() == word1 || sir.toString() == word2 || sir.toString() == word3 || sir.toString() == word4 || sir.toString() == word5){
         sir = myword();
-        document.getElementById('body').style.backgroundColor = "#000000ef";
+        document.getElementById('nextlevel-modal-background').style.display = "block";
         document.getElementById('fiveletterbox').style.filter = "blur(4px)";
         document.getElementById('level1-letter-container').style.filter = "blur(4px)";
         document.getElementById('modal-word').innerHTML = sir;
@@ -155,14 +155,14 @@ function verify(){
         document.getElementById('modalbutton').innerHTML = "Keep Trying!";
         document.getElementById('modalbutton').addEventListener('click' , closemodal);
         nextlevelmodal.style.display = "flex";
-        SlowClap.play();
+        Ba_Dum_Tss.play();
         sir = [];
         k = 0 ;
 }
 
     else {
         sir = myword(); 
-        document.getElementById('body').style.backgroundColor = "#000000ef";
+        document.getElementById('nextlevel-modal-background').style.display = "block";
         document.getElementById('fiveletterbox').style.filter = "blur(4px)";
         document.getElementById('level1-letter-container').style.filter = "blur(4px)";
         document.getElementById('modal-word').innerHTML = sir;
@@ -179,7 +179,7 @@ function verify(){
 }  
 
 function closemodal(){
-    document.getElementById('body').style.backgroundColor = "#ffffff33";
+    document.getElementById('nextlevel-modal-background').style.display = "none";
     console.clear();
     document.getElementById('fiveletterbox').style.filter = "blur(0px)";
     document.getElementById('level1-letter-container').style.filter = "blur(0px)";
@@ -200,7 +200,7 @@ function closemodal(){
     document.getElementById('T').style.display = "block";
 }
 function gonext() {
-    document.getElementById('body').style.backgroundColor = "#ffffff33";
+    document.getElementById('nextlevel-modal-background').style.display = "none";
     location = '../Levels-HTML/Level 3.html';
     console.clear();
 }

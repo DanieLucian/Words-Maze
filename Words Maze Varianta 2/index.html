@@ -13,7 +13,7 @@
 <body id="body">
 
  
-<audio src="Super Mario Bros. Music - Ground Theme.mp3" type="audio.mp3" id="background-music" autoplay="true" loop="true"></audio>
+<audio src="sounds/background theme.mp3" type="audio.mp3" id="background-music" autoplay="true" loop="true"></audio>
 
 <button id="music-button" onclick="playOrPause()">
     <div id="cross"></div>
@@ -28,7 +28,7 @@
     <br>
     <button class="startbuttons" onclick="toLevels()">Levels</button>
     <br>
-    <button class="startbuttons" onclick="exit()">Exit</button>
+    <button class="startbuttons" onclick="self.close()">Exit</button>
     </main>
 
 </div>
@@ -66,20 +66,49 @@
 
    <h1>Levels</h1>
     <div class="levelbox">
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 1.html'">1</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 2.html'">2</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 3.html'">3</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 4.html'">4</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 5.html'">5</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 6.html'">6</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 7.html'">7</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 8.html'">8</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 9.html'">9</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 10.html'">10</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 11.html'">11</button>
-        <button class="levelbuttons" onclick="location='Levels/Levels-HTML/Level 12.html'">12</button>
+        <button class="levelbuttons" id="1" onclick="location='Levels/Levels-HTML/Level 1.html'"><p>1</p>
+            </button>
+        <button class="levelbuttons" id="2" onclick="UnlockRequest2()"><p>2</p>
+            <div class="lock" id="lock2"></div></button>
+        <button class="levelbuttons" id="3" onclick="UnlockRequest3()"><p>3</p>
+            <div class="lock" id="lock3"></div></button>
+        <button class="levelbuttons" id="4" onclick="UnlockRequest4()"><p>4</p>
+            <div class="lock" id="lock4"></div></button>
+        <button class="levelbuttons" id="5" onclick="UnlockRequest5()"><p>5</p>
+            <div class="lock" id="lock5"></div></button></button>
+        <button class="levelbuttons" id="6" onclick="UnlockRequest6()"><p>6</p>
+            <div class="lock" id="lock6"></div></button></button>
+        <button class="levelbuttons" id="7" onclick="UnlockRequest7()"><p>7</p>
+            <div class="lock" id="lock7"></div></button></button>
+        <button class="levelbuttons" id="8" onclick="UnlockRequest8()"><p>8</p>
+            <div class="lock" id="lock8"></div></button></button>
+        <button class="levelbuttons" id="9" onclick="UnlockRequest9()"><p>9</p>
+            <div class="lock" id="lock9"></div></button></button>
+        <button class="levelbuttons" id="10" onclick="UnlockRequest10()"><p>10</p>
+            <div class="lock" id="lock10"></div></button></button>
+        <button class="levelbuttons" id="11" onclick="UnlockRequest11()"><p>11</p>
+            <div class="lock" id="lock11"></div></button></button>
+        <button class="levelbuttons" id="12" onclick="UnlockRequest12()"><p>12</p>
+            <div class="lock" id="lock12"></div></button></button>
         <button class="levelbuttons" id="levels-back-button" onclick="toMenu()">Back</button>
     </div>
+
+    <div class="levels-modal" id="levels-modal"></div>
+    <div class="levels-modal-content-box" id="levels-modal-content-box">
+         <div class="levels-modal-content" id="levels-modal-content">
+                <div id="levels-modal-header">
+                    <p id="levels-modal-header-text"></p>
+                    <span id="close-levels-modal" onclick="closeLevelsModal()">&times;</span>
+                </div>
+                <div id="levels-modal-body">
+                    <p id="levels-modal-body-text">Insert Keyword:</p>
+                    <input id="insert-text" type="text">
+                </div>
+                <div id="levels-modal-footer">
+                    <button id="levels-modal-button">CHECK</button>
+                </div>
+           </div>
+    </div>        
 </div>
 
 </div>

@@ -3,7 +3,7 @@ html {
 }
 
 #body {
-    background-image: url("background.gif");
+    background-image: url("images/background.gif");
     background-blend-mode: lighten;
     background-color: #ffffff2a;
     height: 800px;
@@ -19,7 +19,7 @@ html {
     height: 44px;
     top: 9px;
     right: 9px;
-    background-image: url("Musical Note.PNG");
+    background-image: url("images/Musical\ Note.png");
     background-position: center;
     outline: none;
     border-radius: 50%; 
@@ -235,6 +235,7 @@ html {
     background-color: rgb(173, 168, 168);
     width: 50px;
     height: 50px;
+    outline: none;
 }
 
 #levels-back-button {
@@ -296,7 +297,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 155px;
+    top: 145px;
     width: 98px;
     height: 68px;
     background-color: rgba(255, 0, 0, 0.733);
@@ -348,6 +349,17 @@ h6 {
 
 .letterbutton:hover {
     background-color: #33cc33;
+}
+
+.nextlevel-modal-background {
+    display: none;
+    position: absolute;
+    top: 0vh;
+    left: 0.5%;
+    height: 100vh;
+    width: 99%;
+    background-color: black;
+    opacity: 0.7;
 }
 
 .nextlevel-modal {
@@ -493,6 +505,182 @@ h6 {
     }
 }
 
+#Last-Page-title {   
+    margin-top: 70px;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bolder;
+    color:#ffffff;
+    text-align: center;
+    vertical-align: middle;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150px;
+    line-height: 98px;
+    text-shadow:-6px 0 rgb(50, 10, 224), 0 3px rgb(226, 3, 3), 0px 0 rgb(0, 0, 0), 0 -3px rgb(41, 207, 19);
+    animation: flash 4.5s infinite;
+}
+
+@keyframes flash {
+     0% {opacity: 1;}
+     25% {opacity: 0;}
+     50% {opacity: 1;}
+     75% {opacity: 0;}
+     100% {opacity: 1;}
+}
+
+.Credits {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50px;
+}
+
+#Credits p {
+    position: relative;
+    font-size: 70px;
+    color: azure;
+    text-align: center;
+    top: 500px;
+}
+.lock {
+    position: relative;
+    background-image: url("images/lock.jpg");
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    bottom: 45px;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.levels-modal {
+    display: none;
+    position: absolute;
+    top: 0vh;
+    left: 0.5%;
+    height: 100vh;
+    width: 99%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+#levels-modal-content-box {
+    display: none;
+    position: absolute;
+    top: 0vh;
+    left: 0.5%;
+    height: 100vh;
+    width: 99%;
+    justify-content: center;
+    align-items: center;
+}
+
+#levels-modal-content {
+    position: relative;
+    display: none;
+    width: 90%;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: center;
+    animation: showmodal 0.5s;
+    bottom: 15vh;
+}
+
+#levels-modal-header {
+    display: flex;
+    background-color: brown;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+#levels-modal-header-text {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#close-levels-modal {
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    font-size: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 10px;
+}
+
+#levels-modal-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background-color: blanchedalmond;
+    height: 20vh;    
+} 
+
+#levels-modal-body-text {
+    position: relative;
+    bottom: 4vh;
+    align-self: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px; 
+    font-weight: normal;
+}
+
+#insert-text {
+    position: relative;
+    text-align: center;
+    align-self: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 12px; 
+    bottom: 4vh;
+}
+
+
+#levels-modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: brown;
+    height: 10vh;
+}
+
+#levels-modal-button {
+    width: 140px;
+    height: 37px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    animation: change 1.1s infinite;
+}
+
+#cancel-levels-modal {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+
+@-webkit-keyframes wrong {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* media queries */
 @media (min-width:768px) {
@@ -596,6 +784,26 @@ h6 {
     #modalbutton {
         font-size: 22px;
     }
+    .lock {
+        left: 26px;
+        margin-top: 37px;
+        opacity: 1;
+    }
+    #insert-text {
+        font-size: 20px;
+        width: 200px;
+    }
+    #levels-modal-content {
+        bottom: 3vh;
+        width: 80%;
+    }
+    #levels-modal-header-text {
+        font-size: 40px;
+    }
+    #close-levels-modal {
+        font-size: 60px;
+        right: 15px;
+    }
 }
 
 @media (min-width:1024px){
@@ -631,7 +839,7 @@ h6 {
         font-size: 23px;
     }
     .backspacebutton-box {
-        top: 200px;
+        top: 190px;
         width: 139px;
         height: 88px;
     }
@@ -642,9 +850,10 @@ h6 {
     .backspacebutton p {
         font-size: 40px;
     }
-    .letterbutton {
-        width: 110px;
-        height: 110px;
+    .eightletterbox .letterbutton {
+        width: 105px;
+        height: 105px;
+        margin: 11px;     
     }
     .modal-content {
         Width: 750px;
@@ -666,7 +875,52 @@ h6 {
         font-size: 37px;
     }
     .eightletterbox {
-        width: 700px;
+        width: 630px;
+        top: 85px;
+    }
+    .nineletterbox {
+        top: 85px;
+    }
+    .fiveletterbox {
+        top: 85px;
+    }
+    .lock {
+        left: 39px;
+        margin-top: 45px;
+    }
+    #levels-modal-body-text {
+        font-size: 32px;
+        bottom: 10vh;
+    }
+    #insert-text {
+        font-size: 30px;
+        width: 250px;
+    }
+    #levels-modal-button {
+        width: 230px;
+        height: 45px;
+        font-size: 30px;
+    }
+    #levels-modal-header {
+        font-size: 45px;
+    }
+    #levels-modal-content {
+        width: 65%;
+        height: 50vh;
+    }
+    #levels-modal-body {
+        height: 40vh;
+    }
+    #levels-modal-header {
+        height: 15vh;
+    }
+    #levels-modal-footer {
+        height: 15vh;
+    }
+    #levels-modal-body-text {
+        bottom: 8vh;
     }
 }
 /* media queries*/
+
+

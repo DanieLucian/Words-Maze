@@ -1,30 +1,25 @@
 var sir = [];
 var k = 0;
-var key = ["T", "O", "A", "D"];
-var word1 = "D,A,T,E";
-var word2 = "D,E,A,L";
-var word3 = "D,E,A,R";
-var word4 = "L,A,T,E";
-var word5 = "L,E,A,D";
-var word6 = "O,V,E,R";
-var word7 = "O,R,A,L";
-var word8 = "L,O,R,D";
-var word9 = "L,O,A,D";
-var word10 = "R,E,A,D";
-var word11 = "R,O,A,D";
-var word12 = "R,E,A,L";
-var word13 = "R,A,T,E";
-var word14 = "T,A,L,E";
-var word15 = "T,E,A,R";
-var word16 = "V,O,T,E";
+var key = ["I", "S", "O", "L", "A", "T", "E", "D"];
+var word1 = "A,S,T,E,R,O,I,D";
+var word2 = "D,I,A,S,T,O,L,E";
+var word3 = "I,D,O,L,A,T,E,R";
+var word4 = "L,E,O,T,A,R,D,S";
+var word5 = "L,O,D,E,S,T,A,R";
+var word6 = "O,E,S,T,R,I,O,L";
+var word7 = "S,O,D,A,L,I,T,E";
+var word8 = "T,A,I,L,O,R,E,D";
+var word9 = "T,O,R,O,I,D,A,L";
+
 var nextlevelmodal = document.getElementById('modal');
 var clap = document.getElementById('clap');
 var fail = document.getElementById('fail');
 var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
+var t = 0;
 
-function O() {
-    document.getElementById('O').style.display = "none";
-    let x = "O";
+function I() {
+    document.getElementById('I').style.display = "none";
+    let x = "I";
     sir.push(x);
     console.log(sir);
     k = k + 1;
@@ -36,102 +31,13 @@ function O() {
         document.getElementById('letter-3').innerHTML = x;
     if (k == 4)
         document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function R() {
-    document.getElementById('R').style.display = "none";
-    let x = "R";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function V() {
-    document.getElementById('V').style.display = "none";
-    let x = "V";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function A() {
-    document.getElementById('A').style.display = "none";
-    let x = "A";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function E() {
-    document.getElementById('E').style.display = "none";
-    let x = "E";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function T() {
-    document.getElementById('T').style.display = "none";
-    let x = "T";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
-    verify();
-}
-function D() {
-    document.getElementById('D').style.display = "none";
-    let x = "D";
-    sir.push(x);
-    console.log(sir);
-    k = k + 1;
-    if (k == 1)
-        document.getElementById('letter-1').innerHTML = x;
-    if (k == 2)
-        document.getElementById('letter-2').innerHTML = x;
-    if (k == 3)
-        document.getElementById('letter-3').innerHTML = x;
-    if (k == 4)
-        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
     verify();
 }
 function L() {
@@ -148,29 +54,228 @@ function L() {
         document.getElementById('letter-3').innerHTML = x;
     if (k == 4)
         document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function E() {
+    document.getElementById('E').style.display = "none";
+    let x = "E";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function O() {
+    document.getElementById('O').style.display = "none";
+    let x = "O";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function D() {
+    document.getElementById('D').style.display = "none";
+    let x = "D";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function A() {
+    document.getElementById('A').style.display = "none";
+    let x = "A";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function O2() {
+    t = 2;
+    document.getElementById('O2').style.display = "none";
+    let x = "O";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+    verify();
+}
+function S() {
+    document.getElementById('S').style.display = "none";
+    let x = "S";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function R() {
+    document.getElementById('R').style.display = "none";
+    let x = "R";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
+    verify();
+}
+function T() {
+    document.getElementById('T').style.display = "none";
+    let x = "T";
+    sir.push(x);
+    console.log(sir);
+    k = k + 1;
+    if (k == 1)
+        document.getElementById('letter-1').innerHTML = x;
+    if (k == 2)
+        document.getElementById('letter-2').innerHTML = x;
+    if (k == 3)
+        document.getElementById('letter-3').innerHTML = x;
+    if (k == 4)
+        document.getElementById('letter-4').innerHTML = x;
+    if (k == 5)
+        document.getElementById('letter-5').innerHTML = x;
+    if (k == 6)
+        document.getElementById('letter-6').innerHTML = x;
+    if (k == 7)
+        document.getElementById('letter-7').innerHTML = x;
+
     verify();
 }
 
 
 function backspace() {
     if (k > 0) {
-        if (sir.slice(-1) == 'O')
-        document.getElementById('O').style.display = "block";
-        if (sir.slice(-1) == 'R')
-        document.getElementById('R').style.display = "block";
-        if (sir.slice(-1) == 'V')
-        document.getElementById('V').style.display = "block";
-        if (sir.slice(-1) == 'A')
-        document.getElementById('A').style.display = "block";
-        if (sir.slice(-1) == 'E')
-        document.getElementById('E').style.display = "block";
-        if (sir.slice(-1) == 'T')
-        document.getElementById('T').style.display = "block";
-        if (sir.slice(-1) == 'D')
-        document.getElementById('D').style.display = "block";
+        if (sir.slice(-1) == 'I')
+        document.getElementById('I').style.display = "block";
         if (sir.slice(-1) == 'L')
         document.getElementById('L').style.display = "block";
-        
+        if (sir.slice(-1) == 'E')
+        document.getElementById('E').style.display = "block";
+        if (sir.slice(-1) == 'O' && t == 1){
+            document.getElementById('O').style.display = "block";
+            t=2
+            }
+        if (sir.slice(-1) == 'D')
+        document.getElementById('D').style.display = "block";
+        if (sir.slice(-1) == 'A')
+        document.getElementById('A').style.display = "block";
+        if (sir.slice(-1) == 'O' && t == 2){
+            document.getElementById('O2').style.display = "block";
+            t=1;
+            }
+        if (sir.slice(-1) == 'S')
+        document.getElementById('S').style.display = "block";
+        if (sir.slice(-1) == 'R')
+        document.getElementById('R').style.display = "block";
+        if (sir.slice(-1) == 'T')
+        document.getElementById('T').style.display = "block";
+
         sir.pop();
         console.log(sir);
         if (k == 1) {
@@ -184,16 +289,33 @@ function backspace() {
         if (k == 3) {
             document.getElementById('letter-3').innerHTML = "_";
             k = k - 1;
-        }        
+        }
+        if (k == 4) {
+            document.getElementById('letter-4').innerHTML = "_";
+            k = k - 1;
+        }
+        if (k == 5) {
+            document.getElementById('letter-5').innerHTML = "_";
+            k = k - 1;
+        }
+        if (k == 6) {
+            document.getElementById('letter-6').innerHTML = "_";
+            k = k - 1;
+        }
+        if (k == 7) {
+            document.getElementById('letter-7').innerHTML = "_";
+            k = k - 1;
+        }
+        
     }
 }
 
 function verify() {
-    if (k == 4) {
+    if (k == 8) {
         if (sir.toString() == key) {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('eightletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Congratulations!";
@@ -206,10 +328,10 @@ function verify() {
             k = 0;
         }
 
-        else if (sir.toString() == word1 || sir.toString() == word2 || sir.toString() == word3 || sir.toString() == word4 || sir.toString() == word5 || sir.toString() == word6 || sir.toString() == word7 || sir.toString() == word8 || sir.toString() == word9 || sir.toString() == word10 || sir.toString() == word11 || sir.toString() == word9 || sir.toString() == word9 || sir.toString() == word9 || sir.toString() == word9 || sir.toString() == word12 || sir.toString() == word13 || sir.toString() == word14 || sir.toString() == word15 || sir.toString() == word16) {
+        else if (sir.toString() == word1 || sir.toString() == word2 || sir.toString() == word3 || sir.toString() == word4 || sir.toString() == word5 || sir.toString() == word6 || sir.toString() == word7 || sir.toString() == word8 || sir.toString() == word9) {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('eightletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Cool!";
@@ -225,7 +347,7 @@ function verify() {
         else {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('eightletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Sorry!";
@@ -243,34 +365,42 @@ function verify() {
 function closemodal() {
     document.getElementById('nextlevel-modal-background').style.display = "none";
     console.clear();
-    document.getElementById('eightletterbox').style.filter = "blur(0px)";
+    document.getElementById('nineletterbox').style.filter = "blur(0px)";
     document.getElementById('level1-letter-container').style.filter = "blur(0px)";
     modal.style.display = "none";
     document.getElementById('letter-1').innerHTML = "_";
     document.getElementById('letter-2').innerHTML = "_";
     document.getElementById('letter-3').innerHTML = "_";
     document.getElementById('letter-4').innerHTML = "_";
-    if (document.getElementById('O').style.display = "none")
-        document.getElementById('O').style.display = "block";
-    if (document.getElementById('R').style.display = "none")
-        document.getElementById('R').style.display = "block";
-    if (document.getElementById('V').style.display = "none")
-        document.getElementById('V').style.display = "block";
-    if (document.getElementById('A').style.display = "none")
-        document.getElementById('A').style.display = "block";
-    if (document.getElementById('E').style.display = "none")
-        document.getElementById('E').style.display = "block";
-    if (document.getElementById('T').style.display = "none")
-        document.getElementById('T').style.display = "block";
-    if (document.getElementById('D').style.display = "none")
-        document.getElementById('D').style.display = "block";
+    document.getElementById('letter-5').innerHTML = "_";
+    document.getElementById('letter-6').innerHTML = "_";
+    document.getElementById('letter-7').innerHTML = "_";
+    document.getElementById('letter-8').innerHTML = "_";
+    if (document.getElementById('I').style.display = "none")
+        document.getElementById('I').style.display = "block";
     if (document.getElementById('L').style.display = "none")
         document.getElementById('L').style.display = "block";
+    if (document.getElementById('E').style.display = "none")
+        document.getElementById('E').style.display = "block";
+    if (document.getElementById('O').style.display = "none")
+        document.getElementById('O').style.display = "block";
+    if (document.getElementById('D').style.display = "none")
+        document.getElementById('D').style.display = "block";
+    if (document.getElementById('A').style.display = "none")
+        document.getElementById('A').style.display = "block";
+    if (document.getElementById('O2').style.display = "none")
+        document.getElementById('O2').style.display = "block";
+    if (document.getElementById('S').style.display = "none")
+        document.getElementById('S').style.display = "block";
+    if (document.getElementById('R').style.display = "none")
+        document.getElementById('R').style.display = "block";
+    if (document.getElementById('T').style.display = "none")
+        document.getElementById('T').style.display = "block";  
 
 }
 function gonext() {
     document.getElementById('nextlevel-modal-background').style.display = "none";
-    location = '../Levels-HTML/Level 8.html';
+    location = '../../Game Over.html';
     console.clear();
 }
 
