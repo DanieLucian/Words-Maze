@@ -15,6 +15,8 @@ var nextlevelmodal = document.getElementById('modal');
 var clap = document.getElementById('clap');
 var fail = document.getElementById('fail');
 var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
+var score = document.getElementById('myscore').innerHTML;
+document.getElementById('points').innerHTML = score;
 
 
 function V() {
@@ -163,11 +165,11 @@ function backspace() {
 }
 
 function verify() {
-    if (k == 5) {
+    if (k == 6) {
         if (sir.toString() == key) {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('fiveletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Congratulations!";
@@ -175,6 +177,9 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Go Next!";
             document.getElementById('modalbutton').addEventListener('click', gonext);
             nextlevelmodal.style.display = "flex";
+            score = score + 100;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             clap.play();
             sir = [];
             k = 0;
@@ -183,7 +188,7 @@ function verify() {
         else if (sir.toString() == word1 || sir.toString() == word2 || sir.toString() == word3 || sir.toString() == word4 || sir.toString() == word5 || sir.toString() == word6 || sir.toString() == word7 || sir.toString() == word8) {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('fiveletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Cool!";
@@ -191,6 +196,9 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Keep Trying!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
             nextlevelmodal.style.display = "flex";
+            score = score + 50;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             Ba_Dum_Tss.play();
             sir = [];
             k = 0;
@@ -199,7 +207,7 @@ function verify() {
         else {
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
-            document.getElementById('fiveletterbox').style.filter = "blur(4px)";
+            document.getElementById('nineletterbox').style.filter = "blur(4px)";
             document.getElementById('level1-letter-container').style.filter = "blur(4px)";
             document.getElementById('modal-word').innerHTML = sir;
             document.getElementById('modal-header-text').innerHTML = "Sorry!";
@@ -207,13 +215,15 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Try Again!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
             nextlevelmodal.style.display = "flex";
+            score = score - 10;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             fail.play();
             sir = [];
             k = 0;
         }
     }
 }
-
 function closemodal() {
     document.getElementById('nextlevel-modal-background').style.display = "none";
     console.clear();

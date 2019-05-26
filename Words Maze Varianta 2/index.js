@@ -1,4 +1,3 @@
-
 var audio = document.getElementById('background-music');
 var word;
 var levels_modal_button = document.getElementById('levels-modal-button');
@@ -43,6 +42,29 @@ function closeLevelsModal() {
     document.getElementById('levels-modal').style.display = "none";
     document.getElementById('levels-modal-content-box').style.display = "none";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function UnlockRequest2() {
     document.getElementById('levels-modal').style.display = "block";

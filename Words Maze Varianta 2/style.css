@@ -505,18 +505,20 @@ h6 {
     }
 }
 
+
+
 #Last-Page-title {   
-    margin-top: 70px;
+    margin-top: 15vh;
     font-family: 'Luckiest Guy', cursive;
     font-weight: bolder;
     color:#ffffff;
     text-align: center;
     vertical-align: middle;
-    width: 450px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 150px;
-    line-height: 98px;
+    font-size: 80px;
+    line-height: 58px;
     text-shadow:-6px 0 rgb(50, 10, 224), 0 3px rgb(226, 3, 3), 0px 0 rgb(0, 0, 0), 0 -3px rgb(41, 207, 19);
     animation: flash 4.5s infinite;
 }
@@ -535,16 +537,16 @@ h6 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 600px;
-    height: 550px;
+    width: 70%;
+    height: 80vh;
     margin-left: auto;
     margin-right: auto;
-    bottom: 50px;
+    bottom: 30px;
 }
 
 #Credits p {
     position: relative;
-    font-size: 70px;
+    font-size: 50px;
     color: azure;
     text-align: center;
     top: 500px;
@@ -672,8 +674,48 @@ h6 {
     right: 5px;
 }
 
+#scoreboard-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 95px;
+    left: 0px;
+}
 
-@-webkit-keyframes wrong {
+#scoreboard {
+    color: rgb(255, 255, 255);
+    border: 4px floralwhite solid;
+    width: 120px;
+    height: 65px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+}
+
+#finalscore {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#finalscore #finalscoreboard {
+    position: relative;
+    right: 9px;
+    color: white;
+    border: 4px floralwhite solid;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+}
+
+@keyframes wrong {
     from {
         opacity: 0;
     }
@@ -779,7 +821,7 @@ h6 {
         top: 10%;
     }
     #modal-body p {
-        font-size: 37px;
+        font-size: 30px;
     }
     #modalbutton {
         font-size: 22px;
@@ -803,6 +845,36 @@ h6 {
     #close-levels-modal {
         font-size: 60px;
         right: 15px;
+    }
+    #Last-Page-title {
+        font-size: 120px;
+        margin-top: 5vh;
+        line-height: 80px;
+    }
+    #scoreboard-box {
+        top: 10px;
+        justify-content: flex-end;
+    }
+
+    #scoreboard {
+        position: relative;
+        width: 170px;
+        height: 100px;
+        font-size: 40px;
+        border: 10px solid;
+        right: 10px;
+    }
+    #finalscore {
+        top: 300px;
+    }
+    #finalscore #finalscoreboard {
+        width: 200px;
+        font-size: 30px;
+        height: 100px;
+        border: 7px solid;
+    }
+    #finalscoreboard #points {
+        font-size: 45px;
     }
 }
 
@@ -919,6 +991,32 @@ h6 {
     }
     #levels-modal-body-text {
         bottom: 8vh;
+    }
+    #scoreboard {
+        height: 120px;
+        width: 200px;
+        font-size: 45px;
+        border: 12px solid;
+    }
+    #points {
+        position: relative;
+        top: 0px;
+        font-size: 50px;
+    }
+    #finalscore {
+        top: 310px;
+    }
+    #finalscore #finalscoreboard {
+        width: 300px;
+        font-size: 45px;
+        height: 150px;
+    }
+    #finalscoreboard #points {
+        font-size: 65px;
+    }
+    #Last-Page-title {
+        font-size: 140px;
+        line-height: 100px;
     }
 }
 /* media queries*/

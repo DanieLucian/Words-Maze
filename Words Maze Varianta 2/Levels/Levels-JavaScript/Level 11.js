@@ -17,11 +17,12 @@ var word13 = "P,I,T,C,H";
 var word14 = "T,E,A,C,H";
 var word15 = "T,H,E,C,A";
 var word16 = "T,H,I,E,F";
-
 var nextlevelmodal = document.getElementById('modal');
 var clap = document.getElementById('clap');
 var fail = document.getElementById('fail');
 var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
+var score = document.getElementById('myscore').innerHTML;
+document.getElementById('points').innerHTML = score;
 
 function T() {
     document.getElementById('T').style.display = "none";
@@ -237,6 +238,9 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Go Next!";
             document.getElementById('modalbutton').addEventListener('click', gonext);
             nextlevelmodal.style.display = "flex";
+            score = score + 100;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             clap.play();
             sir = [];
             k = 0;
@@ -253,6 +257,9 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Keep Trying!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
             nextlevelmodal.style.display = "flex";
+            score = score + 50;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             Ba_Dum_Tss.play();
             sir = [];
             k = 0;
@@ -269,6 +276,9 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Try Again!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
             nextlevelmodal.style.display = "flex";
+            score = score - 10;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             fail.play();
             sir = [];
             k = 0;

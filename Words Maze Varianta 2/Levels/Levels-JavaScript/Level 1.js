@@ -12,6 +12,9 @@ var nextlevelmodal = document.getElementById('modal');
 var clap = document.getElementById('clap');
 var fail = document.getElementById('fail');
 var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
+//Aici am facut variabila care preia numarul din id-ul 'myscore' care se afla in score.html apoi variabila o afisez in cadranul cu scorul de pe pagina nivelului//
+var score = document.getElementById('myscore').innerHTML;
+document.getElementById('points').innerHTML = score;
 
 function C() {
     document.getElementById('C').style.display = "none";
@@ -118,6 +121,7 @@ function backspace() {
 function verify() {
     if (k == 3) {
         if (sir.toString() == key) {
+            level_1_status = 1;
             sir = myword();
             document.getElementById('nextlevel-modal-background').style.display = "block";
             document.getElementById('fiveletterbox').style.filter = "blur(4px)";
@@ -128,6 +132,10 @@ function verify() {
             document.getElementById('modalbutton').innerHTML = "Go Next!";
             document.getElementById('modalbutton').addEventListener('click', gonext);
             nextlevelmodal.style.display = "flex";
+//Aici se face modificarea scorului si reafisarea acestuia atat pe cadranul din nivel cat si pe div-ul din pagina score.html pentru a putea fi preluat de nivelul urmator fara sa se piarda. Analog la celelalte cazuri si anume daca gasesc cuvant sau tastez un cuvant care nu exista.//            
+            score = score + 100;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             clap.play();
             sir = [];
             k = 0;
@@ -143,6 +151,9 @@ function verify() {
             document.getElementById('modal-body-text').innerHTML = "You have found a word, but not the keyword:";
             document.getElementById('modalbutton').innerHTML = "Keep Trying!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
+            score = score + 50;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             nextlevelmodal.style.display = "flex";
             Ba_Dum_Tss.play();
             sir = [];
@@ -159,6 +170,9 @@ function verify() {
             document.getElementById('modal-body-text').innerHTML = "Didn't heard of this:";
             document.getElementById('modalbutton').innerHTML = "Try Again!";
             document.getElementById('modalbutton').addEventListener('click', closemodal);
+            score = score - 10;
+            document.getElementById('points').innerHTML = score;
+            document.getElementById('myscore').innerHTML = score;
             nextlevelmodal.style.display = "flex";
             fail.play();
             sir = [];
