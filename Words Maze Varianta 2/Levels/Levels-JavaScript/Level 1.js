@@ -16,6 +16,21 @@ var Ba_Dum_Tss = document.getElementById('Ba Dum Tss');
 var score = document.getElementById('myscore').innerHTML;
 document.getElementById('points').innerHTML = score;
 
+//prea multe functii care fac acelasi lucru
+//foloseste parametri
+//exemplu cum poti face o functie in loc de 5 pe randurile urmatoare
+// function pressLetter(litera) {
+//   document.getElementById(litera).style.display = 'none';
+//   sir.push(litera);
+//   console.log(sir);
+//   k = k + 1;
+//   if (k == 1) document.getElementById('letter-1').innerHTML = litera;
+//   if (k == 2) document.getElementById('letter-2').innerHTML = litera;
+//   if (k == 3) document.getElementById('letter-3').innerHTML = litera;
+//   verify();
+// }
+
+
 function C() {
     document.getElementById('C').style.display = "none";
     let x = "C";
